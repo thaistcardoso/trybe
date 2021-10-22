@@ -1,0 +1,8 @@
+internet
+unix
+bash
+kernel
+zsh
+vsh
+terminal
+git
