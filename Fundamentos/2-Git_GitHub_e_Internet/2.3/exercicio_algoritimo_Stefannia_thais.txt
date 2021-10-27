@@ -1,0 +1,8 @@
+abrir a porta para sair
+subir para portaria 
+seguir em frente para a avenida
+virar a esquerda
+seguir em frente por 100 metros
+entrar na rua da feira a direita
+mensagem "chegou ao destino"
+
