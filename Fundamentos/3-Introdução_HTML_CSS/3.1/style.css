@@ -73,3 +73,32 @@ body{
     .header-text p{
       margin-top: 30px;
     }
+
+    .market{
+      padding: 70px 30px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    .market-text{
+      max-width: 60%;
+      margin-bottom: 30px;
+
+    }
+
+    .student-testimonial{
+      width: 33%;
+      margin: 30%;
+      padding: 30px 70px 90px 70px;
+      float: left;
+    }
+    .learning{
+      padding: 30px 70px;
+      background-color: #cccccc;
+      min-height: 350px;
+    }
+    .learning-left{
+      float: left;
+      max-width: 35%;
+
+    }
+ 
