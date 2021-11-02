@@ -1,0 +1,19 @@
+h1, p{
+    text-align: center;
+}
+li{
+    font-family: 'Courier New', Courier, monospace;
+}
+ol li:hover{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: purple;
+    color: white;
+    list-style: black;
+}
+ol li:active{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+ol, ul{
+    list-style: none;
+}
