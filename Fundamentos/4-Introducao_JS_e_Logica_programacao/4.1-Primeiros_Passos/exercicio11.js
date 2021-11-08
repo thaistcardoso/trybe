@@ -10,5 +10,5 @@ if (salBruto < 1556,94) {
     case (salBruto < 1903,98):
         salLiq;
         break;
-    case
+ 
 }
