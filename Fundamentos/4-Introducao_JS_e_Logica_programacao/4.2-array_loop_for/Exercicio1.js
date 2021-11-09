@@ -39,12 +39,19 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // console.log(maior);
 
 // exercicio 6
-// let impares = numbers[0];
+let impares = 0
 
 
-// for (let i =0; i < numbers.length; i += 1){
-//     if ()
-// }
+for (let i =0; i < numbers.length; i += 1){
+    if (numbers[i]%2 !== 0){
+        impares += 1;
+    }
+}
+if (impares === 0 ){
+    console.log("Nenhum valor ímpar encontrado")
+}else {
+    console.log(impares);
+}
 
 //exercicio 7
 // let menor = numbers[0];
@@ -56,11 +63,20 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // }
 // console.log(menor);
 
-let array = [];
+//exercicio 8
+// let array = [];
 
-for (i = 1; i < 26; i += 1){
-    array.push(i);
-}
-for (i = 0; i <array.length; i += 1){
-    console.log(array[i]);
-}
+// for (i = 1; i < 26; i += 1){
+//     array.push(i);
+// }
+// for (i = 0; i <array.length; i += 1){
+//     console.log(array[i]);
+// }
+
+// exercicio9
+
+// for (i = 0; i <array.length; i += 1){
+//     let mod2 = array[i]%2;
+//     console.log(mod2);
+// }
+
