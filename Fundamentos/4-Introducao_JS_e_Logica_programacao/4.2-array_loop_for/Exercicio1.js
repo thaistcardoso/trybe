@@ -79,4 +79,4 @@ if (impares === 0 ){
 //     let mod2 = array[i]%2;
 //     console.log(mod2);
 // }
-
+// teste
