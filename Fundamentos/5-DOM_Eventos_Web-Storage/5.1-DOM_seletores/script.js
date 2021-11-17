@@ -23,15 +23,10 @@ function alteraTitulo(){
 alteraTitulo();
 
 //exercicio 5
-// function convertTextUpperCase(){
-//     const paragrafo = document.getElementsByTagName("p");
-//     paragrafo.innerHTML = paragrafo.innerHTML.toUpperCase();
-// }
-// convertTextUpperCase();
 function convertTextUpperCase(){
     const paragrafo = document.getElementsByTagName("p");
     for (let i = 0; i < paragrafo.length; i += 1) {
-        paragrafo[i].style.fontVariantCaps = 'all-small-caps';
+        paragrafo[i].innerText = paragrafo[i].innerText.toUpperCase();
     }
 }
 convertTextUpperCase();   
