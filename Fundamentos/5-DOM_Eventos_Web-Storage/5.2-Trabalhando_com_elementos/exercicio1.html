@@ -97,7 +97,19 @@
     section2.appendChild(img);
 
     // 8-
+    const ul = document.createElement('ul');
+    ul.id = 'lista';
+    section3.appendChild(ul);
     
+    // add li
+    let arr = ['um', 'dois', 'três','quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+    console.log(arr);
+    for (let i = 0; i < arr.length; i += 1) {
+      const li = document.createElement('li');
+      li.id = 'itemlist';
+      li.innerText = arr[i];
+      ul.appendChild(li);
+    }
 
 
 
