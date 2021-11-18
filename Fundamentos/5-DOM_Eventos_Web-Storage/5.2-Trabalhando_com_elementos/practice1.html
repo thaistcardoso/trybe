@@ -1,0 +1,35 @@
+<main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  </main>
+  <script>
+    // 1 - 
+      let ondeEuEstou = document.getElementById('elementoOndeVoceEsta');
+      // 2- 
+      let pai = ondeEuEstou.parentElement;
+      pai.style.backgroundColor = "red";
+      //3-
+      const texto1roFilho = ondeEuEstou.firstElementChild;
+      texto1roFilho.innerText = 'primeiroFilhoDoFilho';
+      // 4-
+      // let primeiroFilho = pai.children[0];
+      let primeiroFilho = pai.firstElementChild;
+      //5-
+      let primeiroFilho1 = ondeEuEstou.previousElementSibling;
+      //6- 
+      let atencao = ondeEuEstou.nextSibling;
+      //7-
+      let terceiroFilho = ondeEuEstou.nextElementSibling;
+      //8-
+      let terceiroFilho1 = pai.children[2];
+      // let terceiroFilho1 = pai.lastElementChild.previousElementSibling;
+      console.log(terceiroFilho1)
+  </script>
