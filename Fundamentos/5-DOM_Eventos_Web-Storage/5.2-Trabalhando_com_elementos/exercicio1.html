@@ -58,19 +58,49 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
-    
+    // 1-
     const body = document.body;
     const h1 = document.createElement('h1');
     h1.id = 'titulo';
     body.appendChild(h1);
     document.getElementById('titulo').innerText = "Exercício 5.2 - JavaScript DOM";
+    
+    // 2-
     const main = document.createElement('main');
     main.className = 'main-content';
     body.appendChild(main);
+
+    // 3-
     const section = document.createElement('section');
     section.className = 'center-content';
     main.appendChild(section);
-    console.log(main)
+
+    // 4-
+    const p = document.createElement('p');
+    p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quam lectus, rutrum eget lorem quis, tincidunt placerat arcu. Cras elit dui, aliquam vitae neque sit amet, rhoncus elementum metus. Pellentesque mollis risus vel mi mattis, at bibendum nulla volutpat. Nulla eget maximus sapien. Nunc maximus nec odio quis mollis. Mauris pretium commodo erat. Aliquam finibus libero a ex rutrum, ac rhoncus tellus hendrerit. Nullam ullamcorper risus sit amet purus iaculis gravida. Ut vulputate vel nunc id commodo. Etiam porttitor nisi a nisl hendrerit vulputate.";
+    section.appendChild(p);
+
+    // 5-
+    const section2 = document.createElement('section')
+    section2.className = 'left-content';
+    main.appendChild(section2);
+
+    // 6- 
+    const section3 = document.createElement('section')
+    section3.className = 'right-content';
+    main.appendChild(section3);
+
+    // 7- 
+    const img = document.createElement('img');
+    img.className = 'small-image';
+    img.src = 'https://picsum.photos/200';
+    section2.appendChild(img);
+
+    // 8-
+    
+
+
+
 
     </script>
   </body>
