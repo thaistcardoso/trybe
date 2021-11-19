@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+    // 1-
+    const body = document.body;
+    const h1 = document.createElement('h1');
+    h1.id = 'titulo';
+    body.appendChild(h1);
+    document.getElementById('titulo').innerText = "Exercício 5.2 - JavaScript DOM";
+    
+    // 2-
+    const main = document.createElement('main');
+    main.className = 'main-content';
+    body.appendChild(main);
+
+    // 3-
+    const section = document.createElement('section');
+    section.className = 'center-content';
+    main.appendChild(section);
+
+    // 4-
+    const p = document.createElement('p');
+    p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quam lectus, rutrum eget lorem quis, tincidunt placerat arcu. Cras elit dui, aliquam vitae neque sit amet, rhoncus elementum metus. Pellentesque mollis risus vel mi mattis, at bibendum nulla volutpat. Nulla eget maximus sapien. Nunc maximus nec odio quis mollis. Mauris pretium commodo erat. Aliquam finibus libero a ex rutrum, ac rhoncus tellus hendrerit. Nullam ullamcorper risus sit amet purus iaculis gravida. Ut vulputate vel nunc id commodo. Etiam porttitor nisi a nisl hendrerit vulputate.";
+    section.appendChild(p);
+
+    // 5-
+    const section2 = document.createElement('section')
+    section2.className = 'left-content';
+    main.appendChild(section2);
+
+    // 6- 
+    const section3 = document.createElement('section')
+    section3.className = 'right-content';
+    main.appendChild(section3);
+
+    // 7- 
+    const img = document.createElement('img');
+    img.className = 'small-image';
+    img.src = 'https://picsum.photos/200';
+    section2.appendChild(img);
+
+    // 8- add ul
+    const ul = document.createElement('ul');
+    ul.id = 'lista';
+    section3.appendChild(ul);
+    
+    // add li
+    let arr = ['um', 'dois', 'três','quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+    console.log(arr);
+    for (let i = 0; i < arr.length; i += 1) {
+      const li = document.createElement('li');
+      li.id = 'itemList';
+      li.innerText = arr[i];
+      ul.appendChild(li);
+    }
+
+   
+
+    // 9- 3 tags h3 - filhas do main - passo 2
+    for (let i = 1; i <= 3; i += 1){
+    const h3 = document.createElement('h3');
+    h3.id = 'titulo3';
+    h3.innerText = 'titulo h3 ' + i;
+    main.appendChild(h3);
+    }
+
+    // parte II 
+    //1- add class title -> h1
+
+    h1.className = 'title';
+
+    //2- add class description -> h3 
+    const tagH3 = document.getElementsByTagName('h3');
+    for (let i = 0; i < 3; i += 1) {
+    tagH3[i].className = 'description';
+    }
+
+    // 3- Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+    const elementoSection2 = document.getElementsByClassName('left-content')[0];
+    main.removeChild(elementoSection2);
+
+    //4- Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+    section3.style.marginRight = 'auto';
+
+    // 5- Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+    const paiDaSection = document.getElementsByClassName('center-content')[0].parentNode;
+    paiDaSection.style.backgroundColor = 'green';
+    
+    //6- Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+    let liListas = document.querySelectorAll('#itemList');
+    for ( let i = 0; i < liListas.length; i += 1){
+      let texto = liListas[i];
+      if (texto.innerText.includes('nove')){
+        ul.removeChild(texto);}
+      if (texto.innerText.includes('dez')){
+        ul.removeChild(texto);}
+    }
+
+    </script>
+  </body>
+</html>
