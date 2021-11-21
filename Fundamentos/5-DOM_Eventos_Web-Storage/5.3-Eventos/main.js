@@ -22,10 +22,10 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
     function changeText(event){
-      // if (input.value === "") {
-      //   break;
-      // } else { 
-      event.target.innerText = input.value;
+      if (input.value !== "") {
+        event.target.innerText = input.value;
+      }
+      
       
     
     }
