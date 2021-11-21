@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://127.0.0.1:5555/5.1-DOM_seletores/exercicio_dom.html",
+            "url": "http://127.0.0.1:5555/5.3-Eventos/practice.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
