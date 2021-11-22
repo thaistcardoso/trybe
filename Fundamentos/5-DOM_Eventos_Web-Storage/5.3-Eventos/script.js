@@ -41,7 +41,7 @@ function createDaysOfTheWeek() {
         const monthDayListItem = document.createElement('li');
         if (numDays === 24 || numDays === 31) {
             monthDayListItem.innerHTML = numDays;
-            monthDayListItem.className = 'day holyday';
+            monthDayListItem.className = 'day holiday';
             monthDays.appendChild(monthDayListItem); 
         } else if (numDays === 4 || numDays === 11 ||numDays === 18) {
             monthDayListItem.innerHTML = numDays;
@@ -71,7 +71,50 @@ function addButtonHoliday(string){
 
 addButtonHoliday('Feriados');
 
+
 function holidayColor() {
-    const holidayBtn = document.getElementById('btn-holiday');
-    const holidays = document.querySelector('.holiday')
+    let holidayBtn = document.querySelector('#btn-holiday');
+    let holidays = document.querySelectorAll('.holiday');
+    let bgcolor = 'rgb(238,238,238)';
+    let setNewColor = 'white';
+
+    holidayBtn.addEventListener('click', function() {
+        for (let index = 0; index < holidays.length; index += 1) {
+            if (holidays[index].style.backgroundColor === setNewColor){
+                holidays[index].style.backgroundColor = bgcolor;
+            } else {
+                holidays[index].style.backgroundColor = setNewColor
+            }
+        }
+    });
 }
+holidayColor()
+
+function addButtonFriday(string){
+    const divBotao = document.querySelector('.buttons-container');
+    const fridayBtn = document.createElement('button');
+    fridayBtn.id = 'btn-friday';
+    divBotao.appendChild(fridayBtn);
+    fridayBtn.innerHTML = string;
+}
+
+addButtonFriday('Sexta-feira');
+
+
+function fridayBtn(fridayDaysArray){
+    let fridarybtn = document.querySelector('#btn-friday');
+    let fridayDays = document.getElementsByClassName('friday');
+    let fridayString = 'SEXTOU o/';
+    
+    fridayBtn.addEventListener('click', function() {
+        for (let index = 0; index < fridayDays.length; index += 1){
+            if (fridayDays[index].innerHTML !== fridayString) {
+                fridayDays[index].innerHTML = fridayString;
+            } else{
+                fridayDays[index].innerHTML = fridayDaysArray[index];
+            }
+        }
+    })
+}
+let fridaysDaysDez = [4, 11, 18, 25];
+fridayBtn(fridaysDaysDez);
