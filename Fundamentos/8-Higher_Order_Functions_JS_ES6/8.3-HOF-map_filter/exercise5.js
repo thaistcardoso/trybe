@@ -76,8 +76,7 @@ function fantasyOrScienceFictionAuthors() {
   const livrosFiltrados = books.filter((book) => (
     (book.genre === 'Ficção Científica') || (book.genre === 'Fantasia')
   ));
-  let livrosMapeados = livrosFiltrados.map((book) => book.author.name).sort();
-  // livrosMapeados.sort((bookA, bookB) => bookA.author.name - bookB.author.name); - entender como fazer separado
-  console.log(livrosMapeados);
+  let livrosMapeados = livrosFiltrados.map((book) => book.author.name);
+  return livrosMapeados.sort((bookA, bookB) => bookA - bookB); 
 }
-fantasyOrScienceFictionAuthors(books);
+console.log(fantasyOrScienceFictionAuthors(books));
