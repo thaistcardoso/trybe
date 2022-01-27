@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Pokemon extends Component {
   render() {
-    const { pokemon: { name, type, averageWeight, imag } } = this.props;
+    const { pokemon: { name, type, averageWeight, image } } = this.props;
     return (
       <div className='pokemon'>
         <div>
@@ -13,7 +13,7 @@ class Pokemon extends Component {
           {` Average Weight: ${averageWeight.value} ${averageWeight.measurementUnit}`}
         </p>
         </div>
-        <img src={imag} alt={`${name} sprite`} />
+        <img src={image} alt={`${name} sprite`} />
       </div>
     );
   }
@@ -27,7 +27,7 @@ Pokemon.propTypes = {
       measurementUnit: PropTypes.string,
       value: PropTypes.number,
     }),
-    pokeImg: PropTypes.string,
+    image: PropTypes.string,
   }).isRequired
 };
 
